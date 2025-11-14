@@ -14,6 +14,8 @@ html {
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
+    color: colors.$white;
+    background: red;
     a {
         color: colors.$black;
     }
@@ -34,7 +36,6 @@ html {
     padding: 0 #{global.$sideIndent + px};
     margin: 0 auto;
 }
-
 
 ._container-large {
     @extend %container;

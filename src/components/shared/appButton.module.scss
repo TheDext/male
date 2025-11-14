@@ -1,0 +1,13 @@
+@use '@var/colors';
+
+.appButton {
+    padding: 10px;
+    border-width: 2px;
+    border-style: solid;
+    font-weight: 600;
+}
+
+._wnr {
+    border-color: colors.$white;
+    color: colors.$white;
+}
