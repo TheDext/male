@@ -1,12 +1,33 @@
 .row {
     display: flex;
     align-items: center;
-    column-gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 20px;
+        background: green;
+        top: 0;
+        left: 50%;
+    }
 }
 .logo {
     display: flex;
-    align-items: center;
     column-gap: 15px;
-    margin: 0 auto;
+    align-items: center;
+    flex: 0 1 240px;
+}
+
+@media (max-width: 1400px) {
+    .logo {
+        order: 1;
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+    .row {
+        outline: 1px solid black;
+        flex-wrap: wrap;
+    }
 }

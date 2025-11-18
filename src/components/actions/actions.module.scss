@@ -1,7 +1,16 @@
 .actions {
     display: flex;
     align-items: center;
+    flex: 0 1 calc(50% - 130px);
+    justify-content: flex-end;
+
     a {
         display: block;
+        white-space: nowrap;
+    }
+}
+@media (max-width: 1400px) {
+    .actions {
+        order: 3;
     }
 }
