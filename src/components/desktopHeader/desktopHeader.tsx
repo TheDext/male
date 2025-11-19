@@ -10,9 +10,7 @@ export const DesktopHeader = () => {
                 <div className={classes.row}>
                     <Nav />
                     <div className={classes.logo}>
-                        <div className={classes.prelogo}>Стрижки</div>
                         <Logo size={'s'} />
-                        <div className={classes.prelogo}>Бритьё</div>
                     </div>
                     <Actions />
                 </div>

@@ -1,4 +1,22 @@
 .logo {
     font-size: 30px;
     display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    column-gap: 16px;
+}
+
+.primary {
+    display: flex;
+
+    .pre {
+        font-weight: 500;
+    }
+    .post {
+        font-weight: 300;
+    }
+}
+.secondary {
+    font-size: 12px;
+    font-weight: 300;
 }

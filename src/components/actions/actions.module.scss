@@ -1,12 +1,23 @@
+@use '@var/colors';
+
 .actions {
     display: flex;
     align-items: center;
     flex: 0 1 calc(50% - 130px);
     justify-content: flex-end;
-
+    column-gap: 20px;
     a {
         display: block;
         white-space: nowrap;
+    }
+}
+.phoneLink {
+    color: colors.$white !important;
+    font-weight: 900;
+
+    img {
+        transform: translate(0, 2px);
+        margin-right: 7px;
     }
 }
 @media (max-width: 1400px) {

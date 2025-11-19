@@ -1,0 +1,38 @@
+@use '@var/colors';
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+.burger {
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    .line,
+    &::before,
+    &::after {
+        background: colors.$white;
+        content: '';
+        height: 2px;
+        width: 100%;
+
+        transition: all 0.3s ease 0s;
+    }
+}
+.burger._active {
+    .line {
+        transform: scale(0);
+    }
+    &::before {
+        transform: translate(0, 7px) rotate(45deg);
+    }
+    &::after {
+        transform: translate(0, -7px) rotate(-45deg);
+    }
+}
