@@ -1,4 +1,5 @@
 @use '@var/colors';
+@use '@var/global';
 
 .actions {
     display: flex;
@@ -23,5 +24,21 @@
 @media (max-width: 1400px) {
     .actions {
         order: 3;
+    }
+}
+
+@media (max-width: global.$mobile) {
+    .actions {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 32px;
+
+        a {
+            width: 100%;
+            text-align: center;
+            &.phoneLink {
+                text-align: start;
+            }
+        }
     }
 }

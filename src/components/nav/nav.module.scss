@@ -1,4 +1,6 @@
 @use '@var/colors';
+@use '@var/global';
+
 .nav {
     flex: 0 1 calc(50% - 130px);
 }
@@ -17,5 +19,12 @@
 @media (max-width: 1400px) {
     .nav {
         order: 2;
+    }
+}
+
+@media (max-width: global.$mobile) {
+    .list {
+        flex-direction: column;
+        row-gap: 22px;
     }
 }
