@@ -1,0 +1,11 @@
+@use '@var/colors';
+@use '@mixins/index';
+
+.subtitle {
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: colors.$grey;
+    margin-top: 10px;
+    @include index.responsive-font(24, 48, 320, 1900);
+}

@@ -1,6 +1,6 @@
 import classes from './mainScreenPromo.module.scss';
-import { AppButton, ButtonVariants } from '@/components/shared';
 import { mainScreePromoConfig } from '@config/mainScreePromo.config';
+import { AppButton, ButtonVariants } from '@/components/shared/appButton';
 
 export const MainScreenPromo = () => {
     const { img, price, preText, btnText, postText } = mainScreePromoConfig;

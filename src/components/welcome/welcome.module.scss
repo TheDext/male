@@ -4,8 +4,6 @@
 @use '@mixins/index';
 
 .welcome {
-    background: colors.$blackBg;
-
     position: relative;
     min-height: 1500px;
     overflow-y: hidden;
@@ -14,20 +12,7 @@
     padding-top: 100px;
     padding-bottom: 200px;
 }
-.welcomeText {
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    @include index.responsive-font(24, 48, 320, 1900);
-}
-.welcomeSubtext {
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    color: colors.$grey;
-    margin-top: 10px;
-    @include index.responsive-font(24, 48, 320, 1900);
-}
+
 .title {
     text-align: center;
     font-weight: lighter;

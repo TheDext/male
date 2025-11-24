@@ -1,6 +1,8 @@
 import classes from './welcome.module.scss';
 import { welcomeConfig } from '@config/welcome.config';
 import { useParallax } from 'react-scroll-parallax';
+import { Title } from '@/components/shared/title';
+import { Subtitle } from '@/components/shared/subtitle';
 
 export const Welcome = () => {
     const { welcomeSubtext, welcomeText, title, subtitle, items, bgImg } =
@@ -33,14 +35,11 @@ export const Welcome = () => {
         <div className={classes.welcome}>
             <div className="_container-default">
                 <div className={classes.body}>
-                    <div className={classes.welcomeText} ref={welcomeTextRef}>
-                        {welcomeText}
+                    <div ref={welcomeTextRef}>
+                        <Title>{welcomeText}</Title>
                     </div>
-                    <div
-                        className={classes.welcomeSubtext}
-                        ref={welcomeSubtextRef}
-                    >
-                        {welcomeSubtext}
+                    <div ref={welcomeSubtextRef}>
+                        <Subtitle>{welcomeSubtext}</Subtitle>
                     </div>
                     <div className={classes.title} ref={titleRef}>
                         {title}

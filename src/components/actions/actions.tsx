@@ -1,7 +1,7 @@
 import classes from './actions.module.scss';
 import { Link } from 'react-router';
 import phone from '@icons/phone.png';
-import { AppButton, ButtonVariants } from '@/components/shared';
+import { AppButton, ButtonVariants } from '@/components/shared/appButton';
 
 export const Actions = () => {
     return (

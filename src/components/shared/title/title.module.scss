@@ -1,0 +1,8 @@
+@use '@mixins/index';
+
+.title {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    @include index.responsive-font(24, 48, 320, 1900);
+}

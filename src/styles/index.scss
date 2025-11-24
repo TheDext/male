@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     color: colors.$white;
-    //background: #ff0000;
+    background: colors.$blackBg;
     a {
         color: colors.$black;
     }
@@ -50,4 +50,7 @@ body {
     color: colors.$black;
     text-align: center;
     @include index.responsive-font(34, 64, 320, 1800);
+}
+._tilt {
+    transform-style: preserve-3d;
 }
