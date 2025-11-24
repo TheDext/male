@@ -1,0 +1,32 @@
+@use '@/styles/fonts';
+@use '@mixins/index';
+
+.promo {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+.row {
+    display: flex;
+    align-items: center;
+    column-gap: 13px;
+    @include index.responsive-font(22, 45, 320, 1900);
+
+    img {
+        @include index.responsive-width(50, 86, 320, 1900);
+    }
+}
+.price {
+    @include index.responsive-property('marginTop', 15, 30, 320, 1900);
+    @include index.responsive-property('marginBottom', 15, 30, 320, 1900);
+    font-size: 32px;
+    span {
+        font-size: 40px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: 400;
+    }
+}

@@ -5,9 +5,14 @@
     border-width: 2px;
     border-style: solid;
     font-weight: 600;
+    cursor: pointer;
 }
 
-._wnr {
+.wnr {
     border-color: colors.$white;
     color: colors.$white;
+}
+.gnr {
+    border-color: colors.$orange;
+    color: colors.$orange;
 }

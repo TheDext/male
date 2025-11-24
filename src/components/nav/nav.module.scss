@@ -22,7 +22,7 @@
     }
 }
 
-@media (max-width: global.$mobile) {
+@media (max-width: global.$tablet) {
     .list {
         flex-direction: column;
         row-gap: 22px;

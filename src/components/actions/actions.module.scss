@@ -27,7 +27,7 @@
     }
 }
 
-@media (max-width: global.$mobile) {
+@media (max-width: global.$tablet) {
     .actions {
         flex-direction: column;
         align-items: flex-start;
