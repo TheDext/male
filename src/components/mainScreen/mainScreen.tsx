@@ -6,7 +6,6 @@ import { MainScreenPromo } from '@/components/mainScreenPromo';
 export const MainScreen = () => {
     return (
         <div className={classes.mainScreen}>
-            <Header />
             <MainScreenPromo />
 
             <BgVideo />

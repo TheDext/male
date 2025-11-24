@@ -1,12 +1,19 @@
+@use "@var/colors";
+
 .header {
     padding: 20px 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 2;
-
+    z-index: 3;
+    transition: all 0.3s ease 0s;
     @media (max-width: 992px) {
         padding: 16px 0;
     }
+}
+
+._nonTransparent {
+    background: colors.$blackHeaderBg;
+
 }

@@ -1,5 +1,7 @@
 @use '@var/colors';
+@use '@var/global';
 @use '@/styles/fonts';
+@use '@mixins/index';
 
 .welcome {
     background: colors.$blackBg;
@@ -14,28 +16,29 @@
 }
 .welcomeText {
     font-weight: 700;
-    font-size: 48px;
     text-transform: uppercase;
     text-align: center;
+    @include index.responsive-font(24, 48, 320, 1900);
 }
 .welcomeSubtext {
     font-weight: 700;
-    font-size: 48px;
     text-align: center;
     text-transform: uppercase;
     color: colors.$grey;
     margin-top: 10px;
+    @include index.responsive-font(24, 48, 320, 1900);
 }
 .title {
-    font-size: 170px;
     text-align: center;
     font-weight: lighter;
     text-transform: uppercase;
     line-height: 0.9;
+
+    @include index.responsive-font(50, 170, 320, 1900);
 }
 .subtitle {
     font-weight: 700;
-    font-size: 40px;
+    @include index.responsive-font(20, 40, 320, 1900);
     text-align: center;
     text-transform: uppercase;
     color: colors.$grey;
@@ -61,17 +64,30 @@
     }
     &:nth-child(3) {
         .item {
-            transform: translate(30%, 0);
+            transform: translate(20%, 0);
         }
     }
     &:nth-child(4) {
         .item {
-            transform: translate(-50%, 50%);
+            transform: translate(-30%, 50%);
         }
     }
 }
 .item {
     max-width: 360px;
+
+    &Title {
+        font-weight: 700;
+        font-size: 26px;
+        text-transform: uppercase;
+    }
+    &Img {
+        margin-top: 15px;
+    }
+    &Description {
+        margin-top: 10px;
+        color: colors.$grey;
+    }
 }
 
 .bgImageWrapper {
@@ -79,14 +95,12 @@
     width: 100%;
     top: 0;
     left: 0;
-    //border: 1px solid red;
     min-height: 100%;
 }
 .bgImage {
     position: absolute;
     top: 50%;
     left: 50%;
-    //z-index: -1;
     transform: translate(-50%, -50%);
     opacity: 0.4;
 
@@ -98,5 +112,23 @@
         top: 0;
         left: 0;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0), #363636);
+    }
+}
+
+@media (max-width: global.$tablet) {
+    .welcome {
+        min-height: 1700px;
+    }
+    .title {
+        margin: 30px 0 0 0;
+    }
+    .row {
+        row-gap: 30px;
+    }
+    .column {
+        flex: 1 1 100%;
+        .item {
+            transform: translate(0, 0) !important;
+        }
     }
 }
