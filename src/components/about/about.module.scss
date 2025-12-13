@@ -1,0 +1,77 @@
+@use '@var/colors';
+@use '@mixins/index';
+
+.body {
+    padding-top: 100px;
+}
+.title {
+    margin-top: 60px;
+    font-size: 190px;
+    @include index.responsive-font(75, 190, 320, 1900);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    &Bold {
+        font-weight: 300;
+    }
+    &Default {
+        font-weight: 100;
+    }
+}
+.subtitle {
+    text-align: center;
+    color: colors.$grey;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 45px;
+    @include index.responsive-font(25, 45, 320, 1900);
+}
+.row {
+    display: flex;
+    margin: 0 -30px;
+    flex-wrap: wrap;
+    padding: 0 70px;
+    margin-top: 60px;
+    row-gap: 60px;
+}
+.column {
+    flex: 0 1 50%;
+    padding: 0 30px;
+}
+.item {
+    width: 100%;
+    img {
+        margin-top: 9px;
+        width: 100%;
+    }
+
+    &Title {
+        font-weight: 900;
+        @include index.responsive-font(28, 35, 992, 1900);
+        text-transform: uppercase;
+    }
+    &Description {
+        margin-top: 9px;
+        color: colors.$grey;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 992px) {
+    .item {
+        &Title {
+            @include index.responsive-font(20, 28, 320, 992);
+        }
+    }
+
+    .row {
+        padding: 0;
+        margin: 60px 0 0 0;
+        justify-content: center;
+    }
+    .column {
+        flex: 1 1 100%;
+        padding: 0;
+        max-width: 600px;
+    }
+}

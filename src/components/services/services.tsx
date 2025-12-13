@@ -5,9 +5,11 @@ import { servicesConfig } from '@config/services.config';
 import { Subtitle } from '@/components/shared/subtitle';
 import Tilt from 'react-parallax-tilt';
 import classNames from '@/shared/lib/classNames';
+import useMatchMedia from '@/core/hooks/useMatchMedia';
 
 export const Services = () => {
     const { services, title } = servicesConfig;
+    const { isDesktop } = useMatchMedia();
     return (
         <div className={classes.services}>
             <div className={'_container-default'}>
@@ -16,6 +18,7 @@ export const Services = () => {
                 <div className={classes.body}>
                     {services.map(({ title, id, img, items }) => (
                         <Tilt
+                            tiltEnable={isDesktop}
                             tiltMaxAngleX={2}
                             tiltMaxAngleY={2}
                             // glareEnable={true}

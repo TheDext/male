@@ -1,9 +1,9 @@
 import { MainScreen } from '@/components/mainScreen';
-import { Welcome } from '@/components/welcome';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Header } from '@/components/header';
 import { Services } from '@/components/services';
 import { Interior } from '@/components/interior';
+import { About } from '@/components/about';
 
 const RootLayout = () => {
     return (
@@ -11,10 +11,10 @@ const RootLayout = () => {
             <Header />
             <MainScreen />
             <ParallaxProvider>
-                <Welcome />
+                <About />
             </ParallaxProvider>
             <Services />
-            <Interior />
+            {/*<Interior />*/}
         </>
     );
 };

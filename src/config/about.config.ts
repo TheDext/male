@@ -1,15 +1,12 @@
-import img01 from '@img/welcome/01.png';
-import img02 from '@img/welcome/02.png';
-import img03 from '@img/welcome/03.png';
-import img04 from '@img/welcome/04.png';
-import bg from '@img/welcome/bg.png';
+import img01 from '@img/about/01.png';
+import img02 from '@img/about/02.png';
+import img03 from '@img/about/03.png';
+import img04 from '@img/about/04.png';
 
-export const welcomeConfig = {
+export const aboutConfig = {
     welcomeText: 'Добро пожаловать',
     welcomeSubtext: 'в новую эру мужского ухода',
-    title: 'Male',
     subtitle: 'BARBERSHOP',
-    bgImg: bg,
     items: [
         {
             id: 'welcome01',
