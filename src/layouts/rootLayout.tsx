@@ -4,6 +4,7 @@ import { Header } from '@/components/header';
 import { Services } from '@/components/services';
 import { Interior } from '@/components/interior';
 import { About } from '@/components/about';
+import { Masters } from '@/components/masters';
 
 const RootLayout = () => {
     return (
@@ -14,7 +15,8 @@ const RootLayout = () => {
                 <About />
             </ParallaxProvider>
             <Services />
-            {/*<Interior />*/}
+            <Interior />
+            <Masters />
         </>
     );
 };

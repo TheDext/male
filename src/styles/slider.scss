@@ -1,0 +1,56 @@
+@use './variables/colors.scss';
+
+.swiper-slide {
+    height: 450px !important;
+    transition: all 0.3s ease 0s !important;
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.swiper-slide-active {
+    height: 600px !important;
+    width: 400px !important;
+}
+
+.swiper-pagination-bullet {
+    height: 4px !important ;
+    background: colors.$greyControl !important;
+    width: 30px !important;
+    border-radius: 0 !important ;
+    transition: all 0.3s ease 0s !important;
+
+    &:first-child {
+        border-radius: 4px 0 0 4px !important;
+    }
+    &:last-child {
+        border-radius: 0 4px 4px 0 !important;
+    }
+    &-active {
+        background: colors.$white !important;
+    }
+    &:hover {
+        background: colors.$grey !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-slide {
+        height: 300px !important;
+        transition: all 0.3s ease 0s !important;
+        position: relative;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .swiper-slide-active {
+        height: 450px !important;
+        width: 250px !important;
+    }
+}

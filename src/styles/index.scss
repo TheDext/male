@@ -3,6 +3,7 @@
 @use './mixins/index';
 @use 'reset';
 @use './fonts';
+@use './slider';
 
 html {
     scroll-behavior: smooth;

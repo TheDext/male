@@ -1,8 +1,10 @@
+@use '@mixins/index';
+
 .services {
     margin-top: 100px;
 }
 .body {
-    padding: 0 60px;
+    padding: 0 40px;
 }
 .wrapper {
     padding: 40px 0;
@@ -24,6 +26,9 @@
     .img {
         transform: translateZ(80px);
     }
+    img {
+        @include index.responsive-width(280, 365, 993, 1900);
+    }
     .items {
         flex: 1 1 auto;
         margin-left: 20px;
@@ -31,7 +36,7 @@
 }
 .item {
     display: flex;
-    column-gap: 20px;
+    column-gap: 15px;
     align-items: center;
     transform-style: preserve-3d;
 
@@ -40,24 +45,43 @@
     }
     &Title {
         flex: 1 1 auto;
-        font-size: 22px;
+        @include index.responsive-font(16, 22, 993, 1900);
         transform: translateZ(-40px);
     }
     &Price {
         font-family: 'Public Sans';
-        font-size: 22px;
+        @include index.responsive-font(16, 22, 993, 1900);
     }
 }
 .items {
     transform-style: preserve-3d;
 }
 .btn {
-    transform: translateZ(80px);
+    transform: translateZ(40px);
 }
 
 .wrapper:nth-child(even) .block .service {
     flex-direction: row-reverse;
     .items .item {
         flex-direction: row-reverse;
+    }
+}
+
+@media (max-width: 992px) {
+    .services * {
+        transform: translateZ(0) !important;
+    }
+    .service {
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+    .img {
+        display: none;
+        //display: flex;
+        //justify-content: center;
+        margin-bottom: 50px;
+        img {
+            width: 80%;
+        }
     }
 }

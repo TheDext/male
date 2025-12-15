@@ -6,6 +6,8 @@
     border-style: solid;
     font-weight: 600;
     cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease 0s;
 }
 
 .wnr {
@@ -15,4 +17,14 @@
 .gnr {
     border-color: colors.$orange;
     color: colors.$orange;
+}
+.gr {
+    border-color: colors.$orange;
+    border-radius: 30px;
+    color: colors.$orange;
+
+    &:hover {
+        background: colors.$orange;
+        color: colors.$blackBtnText;
+    }
 }

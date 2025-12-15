@@ -1,0 +1,73 @@
+@use '@var/colors';
+.swiper {
+    min-height: 600px;
+}
+.interior {
+    margin-top: 100px;
+}
+.control {
+    max-width: 275px;
+    height: 50px;
+
+    margin: 0 auto;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+.arrow {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+    top: 3px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 2.5px;
+        background: colors.$greyControl !important;
+        border-radius: 2px 0 0 2px;
+        transform: rotate(-45deg);
+        top: -3px;
+        left: 0;
+        transition: all 0.3s ease 0s !important;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 2.5px;
+        background: colors.$greyControl !important;
+        border-radius: 2px 0 0 2px;
+        transform: rotate(45deg);
+        top: 4px;
+        left: 0;
+        transition: all 0.3s ease 0s !important;
+    }
+}
+.arrow.next {
+    transform: rotate(180deg);
+    top: -3px;
+}
+.arrow:hover {
+    &:before,
+    &:after {
+        background: colors.$white !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper {
+        min-height: 500px;
+    }
+    .control {
+        margin-top: 5px;
+    }
+}
