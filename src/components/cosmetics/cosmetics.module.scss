@@ -1,0 +1,28 @@
+.cosmetics {
+    margin-top: 100px;
+    img {
+        height: 300px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    margin-top: 50px;
+    row-gap: 16px;
+    justify-content: center;
+}
+.column {
+    flex: 1 1 25%;
+    display: flex;
+    padding: 0 8px;
+    min-width: 320px;
+}
+.showMoreBtn {
+    margin: 0 auto;
+    margin-top: 60px;
+    max-width: 250px;
+}

@@ -13,6 +13,12 @@
 .wnr {
     border-color: colors.$white;
     color: colors.$white;
+
+    &:hover {
+        border-color: colors.$blackBtnText;
+        color: colors.$blackBtnText;
+        background: colors.$white;
+    }
 }
 .gnr {
     border-color: colors.$orange;
