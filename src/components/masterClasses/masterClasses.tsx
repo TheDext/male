@@ -8,7 +8,7 @@ export const MasterClasses = () => {
 
     return (
         <div className={classes.masterClasses}>
-            <div className="_container-large">
+            <div className="_container-default">
                 <Title>{title}</Title>
                 <div className={classes.subtitle}>{subtitle}</div>
                 <div className={classes.row}>

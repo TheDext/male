@@ -1,4 +1,5 @@
 @use '@var/colors';
+@use '@mixins/index';
 
 .contacts {
     background: colors.$blackBtnText;
@@ -26,9 +27,10 @@
     color: colors.$grey;
 }
 .note {
-    font-size: 22px;
     font-weight: 900;
     text-transform: uppercase;
+    color: #ffffff;
+    @include index.responsive-font(16, 22, 768, 1800);
 }
 .map {
     flex: 0 1 100%;
@@ -36,6 +38,12 @@
     * {
         width: 100%;
         height: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .contacts {
+        margin-top: 100px;
     }
 }
 
