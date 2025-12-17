@@ -20,9 +20,20 @@
     display: flex;
     padding: 0 8px;
     min-width: 320px;
+    max-width: 100%;
 }
 .showMoreBtn {
     margin: 0 auto;
     margin-top: 60px;
     max-width: 250px;
+}
+
+@media (max-width: 1230px) {
+    .column {
+        flex: 1 1 50%;
+        display: flex;
+        padding: 0 8px;
+        min-width: 320px;
+        max-width: 100%;
+    }
 }

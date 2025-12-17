@@ -1,0 +1,48 @@
+@use '@var/colors';
+
+.certificates {
+    margin-top: 100px;
+    img {
+        height: 300px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+.subtitle {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 17px;
+}
+.note {
+    color: colors.$grey;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    margin-top: 50px;
+    row-gap: 16px;
+    justify-content: center;
+}
+.column {
+    flex: 1 1 25%;
+    display: flex;
+    padding: 0 8px;
+    min-width: 320px;
+    max-width: 100%;
+}
+
+@media (max-width: 1230px) {
+    .column {
+        flex: 1 1 50%;
+        display: flex;
+        padding: 0 8px;
+        min-width: 320px;
+        max-width: 100%;
+    }
+}

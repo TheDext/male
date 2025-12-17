@@ -2,6 +2,7 @@
 
 .item {
     width: 100%;
+    max-width: 385px;
     display: flex;
     flex-direction: column;
     background: #000;
@@ -33,4 +34,10 @@
 }
 .btn {
     margin-top: auto;
+}
+
+@media (max-width: 1230px) {
+    .item {
+        max-width: 100%;
+    }
 }

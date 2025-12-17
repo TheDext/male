@@ -1,5 +1,5 @@
 import classes from './bgVideo.module.scss';
-import video from '@/assets/video/01.mp4';
+import video from '@/assets/video/01.webm';
 
 export const BgVideo = () => (
     <div className={classes.bgVideo}>

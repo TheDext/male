@@ -6,6 +6,9 @@ import { Interior } from '@/components/interior';
 import { About } from '@/components/about';
 import { Masters } from '@/components/masters';
 import { Cosmetics } from '@/components/cosmetics';
+import { Certificates } from '@/components/certificates';
+import { MasterClasses } from '@/components/masterClasses';
+import { Contacts } from '@/components/contacts';
 
 const RootLayout = () => {
     return (
@@ -19,6 +22,9 @@ const RootLayout = () => {
             <Interior />
             <Masters />
             <Cosmetics />
+            <Certificates />
+            <MasterClasses />
+            <Contacts />
         </>
     );
 };
