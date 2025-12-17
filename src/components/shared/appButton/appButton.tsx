@@ -13,7 +13,11 @@ interface IAppButton {
     children: string | ReactNode;
 }
 
-export const AppButton: FC<IAppButton> = ({ children, variant }) => {
+export const AppButton: FC<IAppButton> = ({
+    children,
+    variant,
+    additionalStyles,
+}) => {
     return (
         <div
             className={classNames(
@@ -26,7 +30,7 @@ export const AppButton: FC<IAppButton> = ({ children, variant }) => {
                     [classes[ButtonVariants.GOLD_RADIUS]]:
                         variant === ButtonVariants.GOLD_RADIUS,
                 },
-                []
+                [additionalStyles]
             )}
         >
             {children}

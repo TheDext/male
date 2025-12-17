@@ -7,7 +7,7 @@ import { Link } from 'react-router';
 export const Contacts = () => {
     const { items, title } = contactsConfig;
     return (
-        <div className={classes.contacts}>
+        <div className={classes.contacts} id="contacts">
             <div className="_container-default">
                 <Title>{title}</Title>
                 <div className={classes.row}>

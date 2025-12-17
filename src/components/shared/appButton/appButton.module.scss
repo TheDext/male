@@ -23,6 +23,10 @@
 .gnr {
     border-color: colors.$orange;
     color: colors.$orange;
+    &:hover {
+        background: colors.$orange;
+        color: colors.$blackBtnText;
+    }
 }
 .gr {
     border-color: colors.$orange;

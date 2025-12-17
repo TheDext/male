@@ -9,7 +9,7 @@ export const Masters = () => {
     const { dariya, anastasiya, elizaveta, vaselina, victoriya } = masters;
 
     return (
-        <div className={classes.masters}>
+        <div className={classes.masters} id="masters">
             <div className="_container-large">
                 <Title>{title}</Title>
                 <div className={classes.row}>

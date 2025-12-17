@@ -11,7 +11,7 @@ export const Services = () => {
     const { services, title } = servicesConfig;
     const { isDesktop } = useMatchMedia();
     return (
-        <div className={classes.services}>
+        <div className={classes.services} id={'services'}>
             <div className={'_container-default'}>
                 <Title>{title}</Title>
 

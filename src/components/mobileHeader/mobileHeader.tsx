@@ -36,14 +36,17 @@ export const MobileHeader = () => {
                         isActive={showMenu}
                     />
                     <Logo />
-                    <AppButton variant={ButtonVariants.WHITE_NON_RADIUS}>
+                    <AppButton
+                        variant={ButtonVariants.WHITE_NON_RADIUS}
+                        additionalStyles={classes.btn}
+                    >
                         Записаться
                     </AppButton>
                 </div>
             </div>
             {showMenu && (
                 <div className={classes.menu}>
-                    <MobileMenu />
+                    <MobileMenu setShowMenu={setShowMenu} />
                 </div>
             )}
         </div>

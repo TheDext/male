@@ -6,7 +6,7 @@ import { aboutConfig } from '@config/about.config';
 export const About = () => {
     const { welcomeSubtext, welcomeText, subtitle, items } = aboutConfig;
     return (
-        <div className={classes.about}>
+        <div className={classes.about} id="about">
             <div className="_container-default">
                 <div className={classes.body}>
                     <div>

@@ -29,7 +29,7 @@ export const Cosmetics = () => {
     };
 
     return (
-        <div className={classes.cosmetics}>
+        <div className={classes.cosmetics} id="cosmetic">
             <div className="_container-default">
                 <Title>{title}</Title>
                 <div className={classes.row}>

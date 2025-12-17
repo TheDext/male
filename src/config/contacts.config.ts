@@ -10,13 +10,13 @@ const contactsConfig = {
             id: 'contacts01',
             icon: img01,
             name: 'Время работы',
-            note: 'c 9:00 до 20:00 ежедневно',
+            note: 'ПН-ВС с 10:00-21:00',
         },
         {
             id: 'contacts02',
             icon: img02,
             name: 'Телефон',
-            note: '+7 (922) 699-46-55',
+            note: '+7 (977) 910-50-53 ',
             link: 'tel:+79779105053',
         },
         {
