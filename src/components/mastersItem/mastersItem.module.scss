@@ -1,4 +1,5 @@
 @use '@var/colors';
+@use '@mixins/index';
 
 .mastersItem {
     transition: all 0.3s ease 0s;
@@ -29,27 +30,36 @@
     transform: translate(0, 10px);
     visibility: hidden;
     opacity: 0;
+    @include index.responsive-property('paddingTop', 8, 16, 992, 1900);
+    @include index.responsive-property('paddingBottom', 8, 16, 992, 1900);
+    @include index.responsive-property('paddingLeft', 12, 16, 992, 1900);
+    @include index.responsive-property('paddingRight', 12, 16, 992, 1900);
 }
 
 .name {
     font-weight: 900;
-    font-size: 48px;
     text-transform: uppercase;
+    @include index.responsive-font(18, 48, 992, 1900);
 }
 .position {
-    margin-top: 20px;
+    @include index.responsive-property('marginTop', 8, 20, 992, 1900);
     font-weight: 900;
     text-transform: uppercase;
     font-family: 'Neutral Face', sans-serif;
+    @include index.responsive-font(14, 16, 992, 1900);
 }
 .description {
-    margin: 16px 0;
+    @include index.responsive-font(14, 19, 992, 1900);
+    @include index.responsive-property('marginTop', 8, 16, 992, 1900);
+    @include index.responsive-property('marginBottom', 12, 16, 992, 1900);
 }
 
-.mastersItem:hover .info {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0, 0px);
+@media (hover: hover) {
+    .mastersItem:hover .info {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0px);
+    }
 }
 
 .btnContent {
@@ -97,5 +107,39 @@
         top: 4px;
         left: 0;
         transition: all 0.3s ease 0s !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .mastersItem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        max-width: 500px;
+        .img {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    ._show .info {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0px);
+    }
+
+    .name {
+        @include index.responsive-font(18, 48, 320, 992);
+    }
+    .position {
+        @include index.responsive-property('marginTop', 8, 20, 320, 992);
+        @include index.responsive-font(14, 16, 320, 992);
+    }
+    .description {
+        @include index.responsive-font(14, 19, 320, 992);
+        @include index.responsive-property('marginTop', 8, 16, 320, 992);
+        @include index.responsive-property('marginBottom', 12, 16, 320, 992);
     }
 }

@@ -1,11 +1,39 @@
 import classes from './mastersItem.module.scss';
 import { AppButton, ButtonVariants } from '@/components/shared/appButton';
+import { useIntersection } from 'react-use';
+import { useEffect, useRef, useState } from 'react';
+import classNames from '@/shared/lib/classNames';
 
 export const MastersItem = ({ item }) => {
     const { img, name, position, description } = item;
+    const [showDescription, setShowDescription] = useState(false);
+    const intersectionRef = useRef(null);
+    const intersection = useIntersection(intersectionRef, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.85,
+    });
 
+    useEffect(() => {
+        if (intersection && intersection.intersectionRatio > 0.85) {
+            setShowDescription(true);
+        } else {
+            setShowDescription(false);
+        }
+    }, [intersection]);
+
+    useEffect(() => {
+        console.log(name, showDescription);
+    }, [showDescription]);
     return (
-        <div className={classes.mastersItem}>
+        <div
+            className={classNames(
+                classes.mastersItem,
+                { [classes._show]: showDescription },
+                []
+            )}
+            ref={intersectionRef}
+        >
             <div className={classes.img}>
                 <img src={img} alt="master" />
             </div>
