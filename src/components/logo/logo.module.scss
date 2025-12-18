@@ -1,3 +1,5 @@
+@use '@mixins/index';
+
 .logo {
     font-size: 30px;
     display: flex;
@@ -27,5 +29,14 @@
     }
     .secondary {
         font-size: 9px;
+    }
+}
+
+@media (max-width: 375px) {
+    .primary {
+        @include index.responsive-font(18, 25, 320, 375);
+    }
+    .secondary {
+        @include index.responsive-font(7, 9, 320, 375);
     }
 }

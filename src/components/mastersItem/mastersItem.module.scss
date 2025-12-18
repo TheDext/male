@@ -84,6 +84,8 @@
     top: 3px;
     transform: scale(0.6);
 
+    display: none;
+
     &:before {
         content: '';
         position: absolute;
@@ -120,6 +122,8 @@
             width: 100%;
             img {
                 width: 100%;
+                max-height: 745px;
+                object-fit: cover;
             }
         }
     }

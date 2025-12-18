@@ -1,5 +1,5 @@
 @use '@var/colors';
-
+@use '@mixins/index';
 .certificates {
     margin-top: 100px;
     img {
@@ -10,10 +10,10 @@
 }
 .subtitle {
     font-weight: 700;
-    font-size: 24px;
     text-transform: uppercase;
     text-align: center;
     margin-top: 17px;
+    @include index.responsive-font(12, 24, 320, 992);
 }
 .note {
     color: colors.$grey;

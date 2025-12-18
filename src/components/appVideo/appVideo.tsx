@@ -1,11 +1,16 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import classes from './appVideo.module.scss';
 import playIcon from '@icons/play.png';
 import classNames from '@/shared/lib/classNames';
+import { useClickAway } from 'react-use';
 
-export const AppVideo = ({ video }) => {
+export const AppVideo = ({ video, poster }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
+
+    useClickAway(videoRef, () => {
+        videoRef.current.pause();
+    });
 
     const handlePlayClick = () => {
         if (videoRef.current) {
@@ -26,6 +31,9 @@ export const AppVideo = ({ video }) => {
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
                 onClick={handlePlayClick}
+                poster={poster}
+                onWaiting={() => console.log('Ждем загрухкт видео')}
+                onCanPlay={() => console.log('Готово')}
             />
             <div
                 className={classNames(

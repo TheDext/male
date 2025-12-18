@@ -22,9 +22,6 @@ export const MastersItem = ({ item }) => {
         }
     }, [intersection]);
 
-    useEffect(() => {
-        console.log(name, showDescription);
-    }, [showDescription]);
     return (
         <div
             className={classNames(

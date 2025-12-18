@@ -1,0 +1,8 @@
+@use '@var/colors';
+
+.footer {
+    padding: 70px 0;
+    background: colors.$blackBtnText;
+    color: colors.$grey;
+    text-align: center;
+}

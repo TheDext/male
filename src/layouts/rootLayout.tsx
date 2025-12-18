@@ -9,6 +9,7 @@ import { Cosmetics } from '@/components/cosmetics';
 import { Certificates } from '@/components/certificates';
 import { MasterClasses } from '@/components/masterClasses';
 import { Contacts } from '@/components/contacts';
+import { Footer } from '@/components/footer';
 
 const RootLayout = () => {
     return (
@@ -25,6 +26,7 @@ const RootLayout = () => {
             <Certificates />
             <MasterClasses />
             <Contacts />
+            <Footer />
         </>
     );
 };

@@ -1,5 +1,6 @@
 @use '@var/colors';
 @use '@var/global';
+@use '@mixins/index';
 
 .nav {
     flex: 0 1 calc(50% - 130px);
@@ -26,5 +27,9 @@
     .list {
         flex-direction: column;
         row-gap: 22px;
+    }
+    a,
+    .link {
+        @include index.responsive-font(18, 22, 320, 425);
     }
 }

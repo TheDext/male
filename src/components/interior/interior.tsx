@@ -3,13 +3,14 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { SwiperSlide, Swiper } from 'swiper/react';
 import 'swiper/css';
 import interiorConfig from '@config/interior.config';
-// import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import classNames from '@/shared/lib/classNames';
+import { Title } from '@/components/shared/title';
 
 export const Interior = () => {
     return (
         <div className={classes.interior}>
+            <Title>Интерьер</Title>
             <Swiper
                 modules={[Navigation, Pagination]}
                 centeredSlides={true}

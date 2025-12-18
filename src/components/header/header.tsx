@@ -2,7 +2,6 @@ import classes from './header.module.scss';
 import useMatchMedia from '@/core/hooks/useMatchMedia';
 import { DesktopHeader } from '@/components/desktopHeader';
 import { MobileHeader } from '@/components/mobileHeader';
-import { useEffect } from 'react';
 import { useWindowScroll } from 'react-use';
 import classNames from '@/shared/lib/classNames';
 

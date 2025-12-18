@@ -2,7 +2,6 @@ import classes from './mobileHeader.module.scss';
 import { BurgerIcon } from '@/components/burgerIcon/burgerIcon';
 import { useEffect, useState } from 'react';
 import { Logo } from '@/components/logo';
-
 import { MobileMenu } from '@/components/mobileMenu/mobileMenu';
 import classNames from '@/shared/lib/classNames';
 import { bodyLock } from '@/shared/lib/bodyLock';

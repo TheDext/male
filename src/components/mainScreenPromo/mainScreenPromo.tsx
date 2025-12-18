@@ -15,9 +15,11 @@ export const MainScreenPromo = () => {
             <div className={classes.price}>
                 от <span>{price}</span> ₽
             </div>
-            <AppButton variant={ButtonVariants.GOLD_NON_RADIUS}>
-                {btnText}
-            </AppButton>
+            <a href="#services">
+                <AppButton variant={ButtonVariants.GOLD_NON_RADIUS}>
+                    {btnText}
+                </AppButton>
+            </a>
         </div>
     );
 };

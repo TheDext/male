@@ -1,14 +1,15 @@
 @use '@var/colors';
+@use '@mixins/index';
 
 .masterClasses {
     margin-top: 100px;
 }
 .subtitle {
     font-weight: 700;
-    font-size: 24px;
     text-transform: uppercase;
     text-align: center;
     margin-top: 10px;
+    @include index.responsive-font(12, 24, 320, 992);
 }
 
 .video {
@@ -101,6 +102,7 @@
     }
     .name {
         text-align: center;
+        @include index.responsive-font(27, 40, 320, 992);
     }
     .note {
         text-align: center;
@@ -108,7 +110,7 @@
     .video {
         width: 100%;
         max-width: 400px;
-        height: 750px;
+        height: 630px;
         margin-top: 30px;
         video {
             object-fit: cover;

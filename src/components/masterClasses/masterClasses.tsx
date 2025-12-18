@@ -12,11 +12,11 @@ export const MasterClasses = () => {
                 <Title>{title}</Title>
                 <div className={classes.subtitle}>{subtitle}</div>
                 <div className={classes.row}>
-                    {items.map(({ id, name, note, video }) => (
+                    {items.map(({ id, name, note, video, poster }) => (
                         <div key={id} className={classes.column}>
                             <div className={classes.item}>
                                 <div className={classes.video}>
-                                    <AppVideo video={video} />
+                                    <AppVideo video={video} poster={poster} />
                                 </div>
                                 <div className={classes.bodyWrapper}>
                                     <div className={classes.body}>
