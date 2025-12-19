@@ -32,6 +32,7 @@ export const AppButton: FC<IAppButton> = ({
                 },
                 [additionalStyles]
             )}
+            id="appBtn"
         >
             {children}
         </div>

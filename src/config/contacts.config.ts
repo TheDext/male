@@ -33,6 +33,12 @@ const contactsConfig = {
             link: 'https://vk.com/male_serp',
             note: '@male',
         },
+        {
+            id: 'contacts05',
+            icon: img01,
+            name: 'Адрес',
+            note: 'Московская область, Серпухов, улица Ворошилова, 130А, 3й этаж.',
+        },
     ],
 };
 export default contactsConfig;

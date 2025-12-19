@@ -34,15 +34,23 @@ export const Cosmetics = ({ setShowBueModal }) => {
                 <Title>{title}</Title>
                 <div className={classes.row}>
                     {visibleItems.map(
-                        ({ id, img, title: name, price, description }) => (
+                        ({
+                            id,
+                            img,
+                            title: name,
+                            price,
+                            sections,
+                            shortDescription,
+                        }) => (
                             <div key={id} className={classes.column}>
                                 <CardItem
                                     id={id}
                                     title={title}
                                     name={name}
                                     price={price}
-                                    description={description}
+                                    description={shortDescription}
                                     img={img}
+                                    sections={sections}
                                     setShowBueModal={setShowBueModal}
                                 />
                             </div>

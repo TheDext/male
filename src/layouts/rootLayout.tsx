@@ -16,6 +16,7 @@ import { bodyLock } from '@/shared/lib/bodyLock';
 
 const RootLayout = () => {
     const [showBueModal, setShowBueModal] = useState(false);
+
     useEffect(() => {
         if (showBueModal) {
             bodyLock.enable();

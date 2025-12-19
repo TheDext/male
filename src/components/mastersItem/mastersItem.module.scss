@@ -147,3 +147,20 @@
         @include index.responsive-property('marginBottom', 12, 16, 320, 992);
     }
 }
+
+@media (max-width: 768px) {
+    .mastersItem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        max-width: 500px;
+        .img {
+            width: 100%;
+            img {
+                width: 100%;
+                max-height: 620px;
+                object-fit: cover;
+            }
+        }
+    }
+}

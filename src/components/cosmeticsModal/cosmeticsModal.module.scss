@@ -1,0 +1,77 @@
+@use '@mixins/index';
+
+.cosmeticsModal {
+    .modal__body {
+        padding: 0;
+    }
+}
+
+.row {
+    display: flex;
+    max-height: 700px;
+    column-gap: 30px;
+}
+.img {
+    flex: 0 1 50%;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.body {
+    flex: 0 1 50%;
+    @include index.responsive-font(14, 18, 320, 1900);
+    overflow: auto;
+    padding: 40px 40px 40px 0;
+}
+
+.title {
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.descriptions {
+    text-align: left;
+}
+.block {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+.price {
+    @include index.responsive-font(18, 26, 320, 1900);
+    color: #ffffff;
+    margin-top: 33px;
+    text-align: right;
+}
+.btn {
+    margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+    .img {
+        img {
+            max-height: 300px;
+        }
+    }
+    .body {
+        overflow: visible;
+        padding: 0;
+    }
+    .cosmeticsModal {
+        .modal__content {
+            overflow: visible;
+        }
+    }
+    .row {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .body {
+        padding-bottom: 30px;
+    }
+}
