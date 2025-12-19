@@ -3,7 +3,7 @@ import certificatesConfig from '@config/certificates.config';
 import { CardItem } from '@/components/cardItem/cardItem';
 import { Title } from '@/components/shared/title';
 
-export const Certificates = () => {
+export const Certificates = ({ setShowBueModal }) => {
     const { title, subtitle, note, items } = certificatesConfig;
 
     return (
@@ -20,6 +20,7 @@ export const Certificates = () => {
                                 name={name}
                                 price={price}
                                 description={description}
+                                setShowBueModal={setShowBueModal}
                             />
                         </div>
                     ))}

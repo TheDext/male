@@ -61,3 +61,41 @@ body {
 .ymaps-2-1-79-map {
     width: 100% !important;
 }
+
+.modal {
+    position: fixed;
+    z-index: 10;
+    background: rgba(80, 77, 77, 0.17);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Для Safari */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    &__body {
+        background: #000;
+        width: 100%;
+        min-height: 300px;
+        max-width: 800px;
+        border-radius: 30px;
+        padding: 70px 30px;
+        position: relative;
+        text-align: center;
+        color: colors.$grey;
+        @include index.responsive-font(16, 25, 320, 992);
+        a {
+            font-weight: 900;
+            color: colors.$grey;
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+    }
+}

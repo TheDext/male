@@ -5,7 +5,7 @@ import { Title } from '@/components/shared/title';
 import { CardItem } from '@/components/cardItem/cardItem';
 import { AppButton, ButtonVariants } from '@/components/shared/appButton';
 
-export const Cosmetics = () => {
+export const Cosmetics = ({ setShowBueModal }) => {
     const { items, title } = cosmeticsConfig;
     const ITEMS_PER_PAGE = 4;
 
@@ -43,6 +43,7 @@ export const Cosmetics = () => {
                                     price={price}
                                     description={description}
                                     img={img}
+                                    setShowBueModal={setShowBueModal}
                                 />
                             </div>
                         )

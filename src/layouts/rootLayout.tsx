@@ -10,8 +10,19 @@ import { Certificates } from '@/components/certificates';
 import { MasterClasses } from '@/components/masterClasses';
 import { Contacts } from '@/components/contacts';
 import { Footer } from '@/components/footer';
+import { useEffect, useState } from 'react';
+import { BuyModal } from '@/components/buyModal';
+import { bodyLock } from '@/shared/lib/bodyLock';
 
 const RootLayout = () => {
+    const [showBueModal, setShowBueModal] = useState(false);
+    useEffect(() => {
+        if (showBueModal) {
+            bodyLock.enable();
+        } else {
+            bodyLock.disable();
+        }
+    }, [showBueModal]);
     return (
         <>
             <Header />
@@ -22,11 +33,12 @@ const RootLayout = () => {
             <Services />
             <Interior />
             <Masters />
-            <Cosmetics />
-            <Certificates />
+            <Cosmetics setShowBueModal={setShowBueModal} />
+            <Certificates setShowBueModal={setShowBueModal} />
             <MasterClasses />
             <Contacts />
             <Footer />
+            {showBueModal && <BuyModal setShowBueModal={setShowBueModal} />}
         </>
     );
 };
