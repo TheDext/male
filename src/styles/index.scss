@@ -78,10 +78,11 @@ body {
     padding: 30px;
 
     &__body {
+        overflow: hidden;
         background: #000;
         width: 100%;
         min-height: 300px;
-        //max-width: 800px;
+        max-width: 1300px;
         border-radius: 30px;
         padding: 70px 30px;
         position: relative;
