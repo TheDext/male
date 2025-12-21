@@ -31,7 +31,9 @@ export const CardItem = ({
     return (
         <>
             <div className={classes.item} onClick={(e) => checkTarget(e)}>
-                <img src={img} alt="cosmetic" />
+                <div className={classes.img}>
+                    <img src={img} alt="cosmetic" />
+                </div>
                 <div className={classes.body}>
                     <div className={classes.name}>{name}</div>
                     <div className={classes.description}>{description}</div>
