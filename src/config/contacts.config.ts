@@ -2,6 +2,7 @@ import img01 from '@icons/contacts/01.png';
 import img02 from '@icons/contacts/02.png';
 import img03 from '@icons/contacts/03.png';
 import img04 from '@icons/contacts/04.png';
+import img05 from '@icons/contacts/05.png';
 
 const contactsConfig = {
     title: 'Контакты',
@@ -35,7 +36,7 @@ const contactsConfig = {
         },
         {
             id: 'contacts05',
-            icon: img01,
+            icon: img05,
             name: 'Адрес',
             note: 'Московская область, Серпухов, улица Ворошилова, 130А, 3й этаж.',
         },
