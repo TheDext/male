@@ -6,16 +6,28 @@ import { Subtitle } from '@/components/shared/subtitle';
 import Tilt from 'react-parallax-tilt';
 import classNames from '@/shared/lib/classNames';
 import useMatchMedia from '@/core/hooks/useMatchMedia';
+import { useInView } from 'react-intersection-observer';
 
 export const Services = () => {
     const { services, title } = servicesConfig;
     const { isDesktop } = useMatchMedia();
+    const { ref, inView } = useInView({
+        threshold: isDesktop ? 0.1 : 0,
+        triggerOnce: true,
+    });
     return (
         <div className={classes.services} id={'services'}>
             <div className={'_container-default'}>
                 <Title>{title}</Title>
 
-                <div className={classes.body}>
+                <div
+                    ref={ref}
+                    className={classNames(
+                        classes.body,
+                        { [classes._inView]: inView },
+                        []
+                    )}
+                >
                     {services.map(({ title, id, img, items }) => (
                         <Tilt
                             tiltEnable={isDesktop}

@@ -2,6 +2,9 @@
 .swiper {
     min-height: 600px;
     margin-top: 40px;
+    opacity: 0;
+    transition: all 2s ease 0.1s;
+    transform: scale(0.95) translate(-30px, 0);
 }
 .slide {
     cursor: pointer;
@@ -64,6 +67,13 @@
     &:before,
     &:after {
         background: colors.$white !important;
+    }
+}
+
+.interior._inView {
+    .swiper {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
     }
 }
 

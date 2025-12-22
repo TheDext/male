@@ -4,10 +4,18 @@ import cosmeticsConfig from '@config/cosmetics.config';
 import { Title } from '@/components/shared/title';
 import { CardItem } from '@/components/cardItem/cardItem';
 import { AppButton, ButtonVariants } from '@/components/shared/appButton';
+import { useInView } from 'react-intersection-observer';
+import classNames from '@/shared/lib/classNames';
+import useMatchMedia from '@/core/hooks/useMatchMedia';
 
 export const Cosmetics = ({ setShowBueModal }) => {
     const { items, title } = cosmeticsConfig;
     const ITEMS_PER_PAGE = 4;
+    const { isDesktop } = useMatchMedia();
+    const { ref, inView } = useInView({
+        threshold: isDesktop ? 0.3 : 0,
+        triggerOnce: true,
+    });
 
     const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
     const [isExpanded, setIsExpanded] = useState(false);
@@ -29,7 +37,15 @@ export const Cosmetics = ({ setShowBueModal }) => {
     };
 
     return (
-        <div className={classes.cosmetics} id="cosmetic">
+        <div
+            ref={ref}
+            className={classNames(
+                classes.cosmetics,
+                { [classes._inView]: inView },
+                []
+            )}
+            id="cosmetic"
+        >
             <div className="_container-default">
                 <Title>{title}</Title>
                 <div className={classes.row}>

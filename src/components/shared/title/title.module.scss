@@ -5,4 +5,13 @@
     text-transform: uppercase;
     text-align: center;
     @include index.responsive-font(24, 48, 320, 1900);
+
+    transition: all 1.2s ease 0.2s;
+    transform: translate(0, 10px);
+    opacity: 0;
+}
+
+.title._inView {
+    transform: translate(0, 0px);
+    opacity: 1;
 }

@@ -2,11 +2,27 @@ import classes from './about.module.scss';
 import { Title } from '@/components/shared/title';
 import { Subtitle } from '@/components/shared/subtitle';
 import { aboutConfig } from '@config/about.config';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
+import classNames from '@/shared/lib/classNames';
 
 export const About = () => {
     const { welcomeSubtext, welcomeText, subtitle, items } = aboutConfig;
+    const { ref, inView } = useInView({
+        threshold: 0.3,
+        triggerOnce: true,
+    });
+
     return (
-        <div className={classes.about} id="about">
+        <div
+            ref={ref}
+            className={classNames(
+                classes.about,
+                { [classes._inView]: inView },
+                []
+            )}
+            id="about"
+        >
             <div className="_container-default">
                 <div className={classes.body}>
                     <div>

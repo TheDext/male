@@ -3,13 +3,26 @@ import classNames from '@/shared/lib/classNames';
 import mastersConfig from '@config/masters.config';
 import { Title } from '@/components/shared/title';
 import { MastersItem } from '@/components/mastersItem';
+import { useInView } from 'react-intersection-observer';
 
 export const Masters = () => {
     const { title, masters } = mastersConfig;
     const { dariya, anastasiya, elizaveta, vaselina, victoriya } = masters;
+    const { ref, inView } = useInView({
+        threshold: 0.3,
+        triggerOnce: true,
+    });
 
     return (
-        <div className={classes.masters} id="masters">
+        <div
+            ref={ref}
+            className={classNames(
+                classes.masters,
+                { [classes._inView]: inView },
+                []
+            )}
+            id="masters"
+        >
             <div className="_container-large">
                 <Title>{title}</Title>
                 <div className={classes.row}>

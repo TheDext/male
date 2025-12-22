@@ -6,10 +6,22 @@ import interiorConfig from '@config/interior.config';
 import 'swiper/css/pagination';
 import classNames from '@/shared/lib/classNames';
 import { Title } from '@/components/shared/title';
+import { useInView } from 'react-intersection-observer';
 
 export const Interior = () => {
+    const { ref, inView } = useInView({
+        threshold: 0.3,
+        triggerOnce: true,
+    });
     return (
-        <div className={classes.interior}>
+        <div
+            className={classNames(
+                classes.interior,
+                { [classes._inView]: inView },
+                []
+            )}
+            ref={ref}
+        >
             <Title>Интерьер</Title>
             <Swiper
                 modules={[Navigation, Pagination]}
@@ -31,7 +43,11 @@ export const Interior = () => {
                     clickable: true,
                     el: '.pagination',
                 }}
-                className={classes.swiper}
+                className={classNames(
+                    classes.swiper,
+                    { [classes._inView]: inView },
+                    []
+                )}
             >
                 {interiorConfig.map((img) => (
                     <SwiperSlide className={classes.slide}>

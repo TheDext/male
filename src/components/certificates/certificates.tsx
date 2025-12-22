@@ -2,12 +2,27 @@ import classes from './certificates.module.scss';
 import certificatesConfig from '@config/certificates.config';
 import { CardItem } from '@/components/cardItem/cardItem';
 import { Title } from '@/components/shared/title';
+import { useInView } from 'react-intersection-observer';
+import classNames from '@/shared/lib/classNames';
+import useMatchMedia from '@/core/hooks/useMatchMedia';
 
 export const Certificates = ({ setShowBueModal }) => {
     const { title, subtitle, note, items } = certificatesConfig;
+    const { isDesktop } = useMatchMedia();
+    const { ref, inView } = useInView({
+        threshold: isDesktop ? 0.3 : 0,
+        triggerOnce: true,
+    });
 
     return (
-        <div className={classes.certificates}>
+        <div
+            ref={ref}
+            className={classNames(
+                classes.certificates,
+                { [classes._inView]: inView },
+                []
+            )}
+        >
             <div className="_container-default">
                 <Title>{title}</Title>
                 <div className={classes.subtitle}>{subtitle}</div>

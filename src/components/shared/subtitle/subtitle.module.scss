@@ -8,4 +8,13 @@
     color: colors.$grey;
     margin-top: 10px;
     @include index.responsive-font(24, 48, 320, 1900);
+
+    transition: all 1.2s ease 0.3s;
+    transform: translate(0, 10px);
+    opacity: 0;
+}
+
+.subtitle._inView {
+    transform: translate(0, 0px);
+    opacity: 1;
 }

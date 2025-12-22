@@ -18,6 +18,7 @@
     "isbot": "^5.1.27",
     "react": "^19.2.2",
     "react-dom": "^19.2.2",
+    "react-intersection-observer": "^10.0.0",
     "react-parallax-tilt": "^1.7.314",
     "react-router": "^7.10.1",
     "react-scroll-parallax": "^3.5.0",

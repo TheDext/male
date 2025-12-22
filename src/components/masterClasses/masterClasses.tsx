@@ -2,12 +2,27 @@ import classes from './masterClasses.module.scss';
 import { Title } from '@/components/shared/title';
 import masterClassesConfig from '@config/masterClasses.config';
 import { AppVideo } from '@/components/appVideo';
+import { useInView } from 'react-intersection-observer';
+import classNames from '@/shared/lib/classNames';
+import useMatchMedia from '@/core/hooks/useMatchMedia';
 
 export const MasterClasses = () => {
     const { title, subtitle, items } = masterClassesConfig;
+    const { isDesktop } = useMatchMedia();
+    const { ref, inView } = useInView({
+        threshold: isDesktop ? 0.3 : 0,
+        triggerOnce: true,
+    });
 
     return (
-        <div className={classes.masterClasses}>
+        <div
+            ref={ref}
+            className={classNames(
+                classes.masterClasses,
+                { [classes._inView]: inView },
+                []
+            )}
+        >
             <div className="_container-default">
                 <Title>{title}</Title>
                 <div className={classes.subtitle}>{subtitle}</div>

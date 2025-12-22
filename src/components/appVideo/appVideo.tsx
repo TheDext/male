@@ -24,7 +24,7 @@ export const AppVideo = ({ video, poster }) => {
     };
 
     return (
-        <div className={classes.videoWrapper}>
+        <div data-video={'wrapper'} className={classes.videoWrapper}>
             <video
                 ref={videoRef}
                 src={video}
@@ -32,8 +32,6 @@ export const AppVideo = ({ video, poster }) => {
                 onPause={() => setIsPlaying(false)}
                 onClick={handlePlayClick}
                 poster={poster}
-                onWaiting={() => console.log('Ждем загрухкт видео')}
-                onCanPlay={() => console.log('Готово')}
             />
             <div
                 className={classNames(
