@@ -37,15 +37,7 @@ export const Cosmetics = ({ setShowBueModal }) => {
     };
 
     return (
-        <div
-            ref={ref}
-            className={classNames(
-                classes.cosmetics,
-                { [classes._inView]: inView },
-                []
-            )}
-            id="cosmetic"
-        >
+        <div id="cosmetic">
             <div className="_container-default">
                 <Title>{title}</Title>
                 <div className={classes.row}>
