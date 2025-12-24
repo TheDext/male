@@ -6,7 +6,7 @@ export const MainScreenPromo = () => {
     const { img, price, preText, btnText, postText } = mainScreePromoConfig;
 
     return (
-        <div className={classes.promo}>
+        <h1 className={classes.promo}>
             <div className={classes.row}>
                 <div>{preText}</div>
                 <img src={img} alt="mustache" />
@@ -20,6 +20,6 @@ export const MainScreenPromo = () => {
                     {btnText}
                 </AppButton>
             </a>
-        </div>
+        </h1>
     );
 };

@@ -9,7 +9,7 @@ export const Title = ({ children }: { children: string }) => {
     });
 
     return (
-        <div
+        <h2
             ref={ref}
             className={classNames(
                 classes.title,
@@ -18,6 +18,6 @@ export const Title = ({ children }: { children: string }) => {
             )}
         >
             {children}
-        </div>
+        </h2>
     );
 };

@@ -3,9 +3,10 @@ import { AppButton, ButtonVariants } from '@/components/shared/appButton';
 import { useIntersection } from 'react-use';
 import { useEffect, useRef, useState } from 'react';
 import classNames from '@/shared/lib/classNames';
+import { Link } from 'react-router';
 
 export const MastersItem = ({ item }) => {
-    const { img, name, position, description } = item;
+    const { img, name, position, description, link } = item;
     const [showDescription, setShowDescription] = useState(false);
     const intersectionRef = useRef(null);
     const intersection = useIntersection(intersectionRef, {
@@ -39,12 +40,14 @@ export const MastersItem = ({ item }) => {
                 <div className={classes.name}>{name}</div>
                 <div className={classes.position}>{position}</div>
                 <div className={classes.description}>{description}</div>
-                <AppButton variant={ButtonVariants.GOLD_RADIUS}>
-                    <div className={classes.btnContent}>
-                        <div className={classes.arrow}></div>
-                        <span>Записаться</span>
-                    </div>
-                </AppButton>
+                <Link to={link}>
+                    <AppButton variant={ButtonVariants.GOLD_RADIUS}>
+                        <div className={classes.btnContent}>
+                            <div className={classes.arrow}></div>
+                            <span>Записаться</span>
+                        </div>
+                    </AppButton>
+                </Link>
             </div>
         </div>
     );

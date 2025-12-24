@@ -10,7 +10,7 @@ export const Actions = () => {
                 <img src={phone} alt="phone" className={classes.phone} />
                 8-977-910-50-53
             </Link>
-            <Link to="#">
+            <Link to="https://n519183.yclients.com/company/491124/personal/menu?o=">
                 <AppButton variant={ButtonVariants.WHITE_NON_RADIUS}>
                     Записаться
                 </AppButton>

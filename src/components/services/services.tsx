@@ -7,6 +7,7 @@ import Tilt from 'react-parallax-tilt';
 import classNames from '@/shared/lib/classNames';
 import useMatchMedia from '@/core/hooks/useMatchMedia';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router';
 
 export const Services = () => {
     const { services, title } = servicesConfig;
@@ -33,8 +34,6 @@ export const Services = () => {
                             tiltEnable={isDesktop}
                             tiltMaxAngleX={2}
                             tiltMaxAngleY={2}
-                            // glareEnable={true}
-                            // glareColor="#463F3F44"
                             perspective={1200}
                             className={classNames(classes.wrapper, {}, [
                                 '_tilt',
@@ -47,7 +46,7 @@ export const Services = () => {
                                 key={id}
                             >
                                 <div className={classes.inner}>
-                                    <Subtitle>{title}</Subtitle>
+                                    <Subtitle meta={true}>{title}</Subtitle>
                                 </div>
 
                                 <div className={classes.service}>
@@ -74,15 +73,19 @@ export const Services = () => {
                                                 >
                                                     {price}
                                                 </div>
-                                                <div className={classes.btn}>
-                                                    <AppButton
-                                                        variant={
-                                                            ButtonVariants.GOLD_NON_RADIUS
-                                                        }
+                                                <Link to="https://n519183.yclients.com/company/491124/personal/menu?o=">
+                                                    <div
+                                                        className={classes.btn}
                                                     >
-                                                        Записаться
-                                                    </AppButton>
-                                                </div>
+                                                        <AppButton
+                                                            variant={
+                                                                ButtonVariants.GOLD_NON_RADIUS
+                                                            }
+                                                        >
+                                                            Записаться
+                                                        </AppButton>
+                                                    </div>
+                                                </Link>
                                             </div>
                                         ))}
                                     </div>

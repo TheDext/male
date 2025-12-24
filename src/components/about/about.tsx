@@ -31,11 +31,12 @@ export const About = () => {
                     <div>
                         <Subtitle>{welcomeSubtext}</Subtitle>
                     </div>
-                    <div className={classes.title}>
+
+                    <h2 className={classes.title}>
                         <div className={classes.titleBold}>MA</div>
                         <div className={classes.titleDefault}>LE</div>
-                    </div>
-                    <div className={classes.subtitle}>{subtitle}</div>
+                    </h2>
+                    <h2 className={classes.subtitle}>{subtitle}</h2>
 
                     <div className={classes.row}>
                         {items.map(({ id, title, img, description }) => (

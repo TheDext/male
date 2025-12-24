@@ -31,7 +31,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-
+                <title>
+                    Мужские стрижки уход за бородой от 1000 рублей в городе
+                    Серпухов
+                </title>
+                <meta
+                    name="description"
+                    content=" Мужские стрижки и уход за бородой в Серпухове от 1000₽. Скидка новым клиентам | Барбершоп MALE"
+                />
                 <Meta />
                 <Links />
             </head>
@@ -47,6 +54,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
     return <Outlet />;
 }
+
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     let message = 'Oops!';
     let details = 'An unexpected error occurred.';

@@ -6,6 +6,7 @@ import { MobileMenu } from '@/components/mobileMenu/mobileMenu';
 import classNames from '@/shared/lib/classNames';
 import { bodyLock } from '@/shared/lib/bodyLock';
 import { AppButton, ButtonVariants } from '@/components/shared/appButton';
+import { Link } from 'react-router';
 
 export const MobileHeader = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -35,12 +36,14 @@ export const MobileHeader = () => {
                         isActive={showMenu}
                     />
                     <Logo />
-                    <AppButton
-                        variant={ButtonVariants.WHITE_NON_RADIUS}
-                        additionalStyles={classes.btn}
-                    >
-                        Записаться
-                    </AppButton>
+                    <Link to="https://n519183.yclients.com/company/491124/personal/menu?o=">
+                        <AppButton
+                            variant={ButtonVariants.WHITE_NON_RADIUS}
+                            additionalStyles={classes.btn}
+                        >
+                            Записаться
+                        </AppButton>
+                    </Link>
                 </div>
             </div>
             {showMenu && (
