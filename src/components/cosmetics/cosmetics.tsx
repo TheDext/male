@@ -65,6 +65,8 @@ export const Cosmetics = ({ setShowBueModal }) => {
                         )
                     )}
                     <div className={classes.column}></div>
+                    <div className={classes.column}></div>
+                    <div className={classes.column}></div>
                 </div>
 
                 <div className={classes.showMoreBtn} onClick={handleShowMore}>
